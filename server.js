@@ -12,6 +12,8 @@ import payrollRoutes from "./src/routers/payrollRoutes.js";
 import taskRoutes from "./src/routers/taskRoutes.js";
 import notificationRoutes from "./src/routers/notificationRoutes.js";
 import userRoutes from "./src/routers/userRoutes.js";
+import mobileRoutes from "./src/routers/mobileRoutes.js";
+import recruitmentRoutes from "./src/routers/recruitmentRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -45,6 +47,8 @@ app.use("/api/payroll", payrollRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/mobile", mobileRoutes);
+app.use("/api/recruitment", recruitmentRoutes);
 
 app.listen(process.env.PORT || 5000, () =>
   console.log(`Server running on port ${process.env.PORT}`)
