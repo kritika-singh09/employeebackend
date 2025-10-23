@@ -1,5 +1,6 @@
 
 import express from "express";
+import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./src/config/db.js";
 import employeeRoutes from "./src/routers/employeeRoutes.js";
@@ -18,6 +19,13 @@ connectDB();
 const BASE_URL = "https://employeebackend-seven.vercel.app";
 
 const app = express();
+
+// CORS Configuration
+app.use(cors({
+  origin: "https://employeefrontend-zeta.vercel.app",
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
