@@ -22,7 +22,10 @@ const app = express();
 
 // CORS Configuration
 app.use(cors({
-  origin: "https://employeefrontend-zeta.vercel.app",
+  origin: [
+    "https://employeefrontend-zeta.vercel.app",
+    "https://employee-admin-ashy.vercel.app"
+  ],
   credentials: true
 }));
 
