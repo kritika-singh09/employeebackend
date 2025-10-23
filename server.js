@@ -6,6 +6,8 @@ import connectDB from "./src/config/db.js";
 dotenv.config();
 connectDB();
 
+const BASE_URL = "https://employeebackend-seven.vercel.app";
+
 const app = express();
 app.use(express.json());
 
